@@ -9,7 +9,7 @@ module.exports=class AnimeServer {
 
         service.findAll()
         .then(result => {
-            baseController.sendResponse(result, req, res);
+            baseController.sendResponse(result, req, res.status(200));
         })
         .catch(err => { baseController.sendResponse(err, req, res.status(500)); });
 }
@@ -19,7 +19,7 @@ module.exports=class AnimeServer {
         item.Id = "AnimeServer-"+v4();
         service.create(item)
         .then(result => {
-            baseController.sendResponse(result, req, res);
+            baseController.sendResponse(result, req, res.status(200));
         })
         .catch(err => { baseController.sendResponse(err, req, res.status(500)); });
     }
@@ -30,7 +30,7 @@ module.exports=class AnimeServer {
         item.UpDate = new Date();
         service.update(id, item)
         .then(result => {
-            baseController.sendResponse(result, req, res);
+            baseController.sendResponse(result, req, res.status(200));
         })
         .catch(err => { baseController.sendResponse(err, req, res.status(500)); });
     }
@@ -39,7 +39,7 @@ module.exports=class AnimeServer {
         const id = req.params.id;
         service.findOne(id)
         .then(result => {
-            baseController.sendResponse(result, req, res);
+            baseController.sendResponse(result, req, res.status(200));
         })
         .catch(err => { baseController.sendResponse(err, req, res.status(500)); });
     }
@@ -47,7 +47,7 @@ module.exports=class AnimeServer {
         const item = req.body;
         service.findItem(item)
         .then(result => {
-            baseController.sendResponse(result, req, res);
+            baseController.sendResponse(result, req, res.status(200));
         })
         .catch(err => { baseController.sendResponse(err, req, res.status(500)); });
 
@@ -57,7 +57,7 @@ module.exports=class AnimeServer {
         const id = req.params.id;
         service.delete(id)
             .then(result => {
-                baseController.sendResponse(result, req, res);
+                baseController.sendResponse(result, req, res.status(200));
             })
             .catch(err => { baseController.sendResponse(err, req, res.status(500)); });
 

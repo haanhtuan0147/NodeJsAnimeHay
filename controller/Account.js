@@ -115,7 +115,7 @@ module.exports=class Account {
         const token = author?.split(" ")[1];
         service.CountDate(token,date)
             .then(result => {
-                baseController.sendResponse(result, req, res);
+                baseController.sendResponse(result, req, res.status(200));
             })
             .catch(err => { baseController.sendResponse(err, req, res.status(500)); });            
         

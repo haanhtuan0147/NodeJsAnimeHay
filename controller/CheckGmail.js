@@ -9,7 +9,7 @@ module.exports=class Gmail{
         item.Id="Gmail-"+v4();
         service.Gmail(item)
         .then(result => {
-            baseController.sendResponse(result, req, res);
+            baseController.sendResponse(result, req, res.status(200));
         })
         .catch(err => { baseController.sendResponse(err, req, res.status(500)); });
     }
