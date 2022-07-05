@@ -6,10 +6,6 @@ const session = require('express-session');
 const dotenv = require('dotenv')
 dotenv.config();
 global.__basedir = __dirname;
-var corsOptions = {
-  origin: 'http://localhost:4000',
-  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-};
 //const jwt = require('jsonwebtoken');
 const Account=require('./router/Account');
 
