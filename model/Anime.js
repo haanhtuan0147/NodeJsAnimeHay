@@ -1,4 +1,4 @@
-const Connect  =require('../Config/connect');
+const Connect  =require('../config/connect');
 const AnimePart = require('./AnimePart');
 const knex = new Connect().knex;
 const Bookshelf =require('bookshelf')(knex);
