@@ -55,6 +55,7 @@ class Server{
             )
             .use(passport.initialize())
             .use(passport.session())
+            .use(bodyParser.urlencoded({extended:true}))
             .use(cors({origin: '*'}))
     }
     start(){
