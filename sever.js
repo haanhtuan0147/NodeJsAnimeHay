@@ -37,7 +37,6 @@ const Accountexp=require('./controller/Account')
 const Account01=new Accountexp();
 class Server{
     app;
-    PORT=4000;
     constructor(){
         this.app=express();
         this.conFig();
@@ -59,9 +58,9 @@ class Server{
             .use(cors({origin: '*'}))
     }
     start(){
-        this.app.listen(process.env.PORT||this.PORT, () => {
+        this.app.listen(process.env.PORT, () => {
 
-            console.log(`server running at port: ${process.env.PORT||this.PORT}`);
+            console.log(`server running at port: ${process.env.PORT}`);
         });
     }
     router(){
