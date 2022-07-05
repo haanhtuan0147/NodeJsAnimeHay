@@ -19,7 +19,7 @@ module.exports= class Connect {
              }
        },  
        useNullAsDefault: true,
-       pool: { min: 0, max: 5 }
+       pool: { min: 0, max: 15 }
    })
 }
 /*module.exports= class Connect {

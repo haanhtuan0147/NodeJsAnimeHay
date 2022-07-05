@@ -65,7 +65,7 @@ class Server{
         });
     }
     router(){
-        this.app
+        this.app.use('/')
        .use('/Comment',Commenttext)
         .use('/Evaluate',Evaluate)
         .use('/Leve',controllertoken.CheckToKenTime,controllertoken.RoleRoot,leve)
