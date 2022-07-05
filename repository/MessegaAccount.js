@@ -1,5 +1,5 @@
 const KnexRepository=require('./repository');
-const Connect  =require('../Config/connect');
+const Connect  =require('../config/connect');
 const knex = new Connect().knex;
 const MessegaAccount01=require('../model/MessegaAccount')
 const MessegaAccount02=new MessegaAccount01();

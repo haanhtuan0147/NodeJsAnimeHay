@@ -1,5 +1,5 @@
 const KnexRepository=require('./repository');
-const Connect  =require('../Config/connect');
+const Connect  =require('../config/connect');
 const knex = new Connect().knex;
 const Anime01=require('../model/Anime');
 const { DOUBLE } = require('mysql/lib/protocol/constants/types');

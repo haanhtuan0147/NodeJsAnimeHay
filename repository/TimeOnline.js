@@ -1,5 +1,5 @@
 const KnexRepository=require('./repository');
-const Connect  =require('../Config/connect');
+const Connect  =require('../config/connect');
 const knex = new Connect().knex;
 const TimeOnline01=require('../model/TimeOnline')
 const TimeOnline02=new TimeOnline01();

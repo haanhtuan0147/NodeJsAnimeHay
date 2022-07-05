@@ -1,5 +1,5 @@
 const KnexRepository=require('./repository');
-const Connect  =require('../Config/connect');
+const Connect  =require('../config/connect');
 const knex = new Connect().knex;
 const Category01=require('../model/Category')
 const Category02=new Category01();

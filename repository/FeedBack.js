@@ -1,5 +1,5 @@
 const KnexRepository=require('./repository');
-const Connect  =require('../Config/connect');
+const Connect  =require('../config/connect');
 const knex = new Connect().knex;
 const FeedBack01=require('../model/FeedBack')
 const FeedBack02=new FeedBack01();

@@ -1,5 +1,5 @@
 const KnexRepository=require('./repository');
-const Connect  =require('../Config/connect');
+const Connect  =require('../config/connect');
 const knex = new Connect().knex;
 const AnimePart01=require('../model/AnimePart')
 const AnimePart02=new AnimePart01();
