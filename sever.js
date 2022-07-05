@@ -65,7 +65,7 @@ class Server{
         });
     }
     router(){
-        this.app.use('/')
+        this.app.use('/',(req,res)=>{res.json("HeLLo")})
        .use('/Comment',Commenttext)
         .use('/Evaluate',Evaluate)
         .use('/Leve',controllertoken.CheckToKenTime,controllertoken.RoleRoot,leve)
